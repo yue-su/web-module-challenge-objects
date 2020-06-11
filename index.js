@@ -191,7 +191,17 @@ The returned object should have the following characteristics:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(num) { 
+  return {
+    odometer: num,
+    drive: function(miles) {
+      this.odometer = miles;
+    }
+  }   
 }
+
+console.log('-----Stretch 3-----');
+const car1 = carMaker(199);
+console.log(car1);
+car1.drive(299);
+console.log(car1);
