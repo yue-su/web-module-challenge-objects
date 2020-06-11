@@ -159,9 +159,18 @@ and should return an array of objects.
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
 */
-  function getLongReviews(/* code here */) {
-    /* code here */
+  function getLongReviews(arr) {
+    const arrFiltered =[];
+    for (let i=0; i<arr.length; i++) {
+      if(arr[i].feedback.split(' ').length > 15) {
+        arrFiltered.push(arr[i]);
+      }
+    }
+    return arrFiltered;
   }
+
+  console.log('-----Strech 2-----');
+  console.log(getLongReviews(reviews));
   
 
 /* STRETCH 3:  This challenge is not related to the data above! 
